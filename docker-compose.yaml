@@ -1,15 +1,11 @@
 nginx:
     build: ./build/nginx
-    environment:
-      NGINX_SERVER_ROOT: /usr/share/nginx/html
     ports:
         - "80:80"
     links:
         - phpfpm
     volumes:
-        - ./nginx/template/default:/etc/nginx/conf.d/defaults.conf
-        # - ./nginx/template/default:/etc/nginx/sites-available/default
-        # - ./nginx/template/default:/etc/nginx/sites-enabled/default
+        - ./nginx/template/default:/etc/nginx/sites-available/default
 
         - ./nginx/logs/nginx-error.log:/var/log/nginx/error.log
         - ./nginx/logs/nginx-access.log:/var/log/nginx/access.log
