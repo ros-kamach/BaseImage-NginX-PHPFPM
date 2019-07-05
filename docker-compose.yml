@@ -1,0 +1,47 @@
+nginx:
+    image: tutum/nginx
+    ports:
+        - "80:80"
+    links:
+        - phpfpm
+    volumes:
+        - ./nginx/template/default:/etc/nginx/sites-available/default
+        - ./nginx/template/default:/etc/nginx/sites-enabled/default
+
+        - ./nginx/logs/nginx-error.log:/var/log/nginx/error.log
+        - ./nginx/logs/nginx-access.log:/var/log/nginx/access.log
+phpfpm:
+    image: php:fpm
+    ports:
+        - "9000:9000"
+    volumes:
+        - ./public:/usr/share/nginx/html
+db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty13q
+    ports:
+      - "3306:3306"
+    volumes:
+        - ./database:/var/lib/mysql
+          
+adminer: 
+    image: adminer
+    restart: always 
+    ports:   
+        - 8090:8080
+    links:   
+        - db
+
+phpmyadmin: 
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+        - 8080:80
+    links:
+        - db
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty13q
+      PMA_ARBITRARY: 1
