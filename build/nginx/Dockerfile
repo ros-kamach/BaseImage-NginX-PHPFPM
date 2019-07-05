@@ -1,1 +1,1 @@
-FROM tutum/nginx
+FROM wodby/nginx:latest

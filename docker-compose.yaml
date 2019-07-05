@@ -1,29 +1,32 @@
 nginx:
     build: ./build/nginx
+    environment:
+      NGINX_SERVER_ROOT: /usr/share/nginx/html
     ports:
         - "80:80"
     links:
         - phpfpm
     volumes:
-        - ./nginx/template/default:/etc/nginx/sites-available/default
-        - ./nginx/template/default:/etc/nginx/sites-enabled/default
+        - ./nginx/template/default:/etc/nginx/conf.d/defaults.conf
+        # - ./nginx/template/default:/etc/nginx/sites-available/default
+        # - ./nginx/template/default:/etc/nginx/sites-enabled/default
 
         - ./nginx/logs/nginx-error.log:/var/log/nginx/error.log
         - ./nginx/logs/nginx-access.log:/var/log/nginx/access.log
 phpfpm:
-    build: ./build/php:fpm
+    build: ./build/phpfpm
     ports:
         - "9000:9000"
     volumes:
         - ./public:/usr/share/nginx/html
-mysql_db:
+db:
     build: ./build/mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: qwerty13q
     ports:
-      - "3306:3306"
+        - "3306:3306"
     volumes:
         - ./database:/var/lib/mysql
           
@@ -33,7 +36,7 @@ adminer:
     ports:   
         - 8090:8080
     links:   
-        - mysql_db
+        - db
 
 phpmyadmin: 
     build: ./build/phpmyadmin
@@ -41,7 +44,7 @@ phpmyadmin:
     ports:
         - 8080:80
     links:
-        - mysql_db
+        - db
     environment:
       MYSQL_ROOT_PASSWORD: qwerty13q
       PMA_ARBITRARY: 1
