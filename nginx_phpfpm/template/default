@@ -3,8 +3,10 @@ server {
 
     # this path MUST be exactly as docker-compose.fpm.volumes,
     # even if it doesn't exists in this dock.
-    root /drupal;
+    root /var/www/html;
     index index.php index.html index.html;
+    error_log /var/log/nginx/drupal_error.log;
+    access_log /var/log/nginx/drupal_access.log;
     
     server_name localhost;
 
@@ -14,7 +16,7 @@ server {
 
     location ~ \.php$ {
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass phpfpm:9000; 
+        fastcgi_pass 127.0.0.1:9000; 
         fastcgi_index index.php;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include fastcgi_params;

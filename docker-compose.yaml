@@ -1,28 +1,23 @@
-nginx:
-    build: ./build/nginx
+nginx_phpfpm:
+    build: ./nginx_phpfpm
     ports:
         - "80:80"
     links:
-        - phpfpm
-        - db_mysql 
+        - db_mysql
     volumes:
-        - ./build/nginx/template/default:/etc/nginx/sites-enable/default
-
-        - ./build/nginx/logs/nginx-error.log:/var/log/nginx/error.log
-        - ./build/nginx/logs/nginx-access.log:/var/log/nginx/access.log
-phpfpm:
-    build: ./build/phpfpm
-    ports:
-        - "9000:9000"
-    volumes:
-        - ./drupal_project:/drupal
+        - ./nginx_phpfpm/template/default:/etc/nginx/sites-enable/default
+        - ./nginx_phpfpm/template/default:/etc/nginx/sites-available/default
+        - ./nginx_phpfpm/logs/nginx-error.log:/var/log/nginx/error.log
+        - ./nginx_phpfpm/logs/nginx-access.log:/var/log/nginx/access.log
+        - ./nginx_phpfpm/logs/drupal_error.log:/var/log/nginx/drupal_error.log
+        - ./nginx_phpfpm/logs/drupal-access.log:/var/log/nginx/drupal_access.log
 
 db_mysql:
-    image: mysql 
+    image: mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: qwerty13q
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
     ports:
         - "3306:3306"
     volumes:
@@ -36,6 +31,5 @@ phpmyadmin:
     links:
         - db_mysql
     environment:
-      MYSQL_ROOT_PASSWORD: qwerty13q
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
       PMA_ARBITRARY: 1
-
