@@ -1,6 +1,14 @@
 ######################
-.DS_Store
+.*
+.git
+Dockerfile
 .DS_Store?
+.DS_Store
+.gitignore
+README.txt
+LICENSE.txt
+.gitattributes
+.dockerignore
 ._*
 .Spotlight-V100
 .Trashes
