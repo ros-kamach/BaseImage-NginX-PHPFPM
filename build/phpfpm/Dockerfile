@@ -2,18 +2,20 @@ FROM ubuntu:16.04
 
 RUN apt update && \
     apt install -y \
-    mc nano curl \
     php7.0-cli \
     php7.0-common \
     php7.0-mysql \
     php7.0-gd \
     php7.0-fpm \
+    php7.0-xml \
     php7.0-cgi \
     php7.0-mcrypt \
     php7.0-curl \
     php7.0-json \
     php7.0-mbstring \
-    php7.0-intl
+    php7.0-intl && \
+    apt -y clean && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.0/cli/php.ini && \
     sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.0/fpm/php.ini && \
@@ -27,10 +29,16 @@ RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.0/cli/php.ini 
     sed -i "s/listen = .*/listen = 9000/" /etc/php/7.0/fpm/pool.d/www.conf && \
     sed -i "s/;catch_workers_output = .*/catch_workers_output = yes/" /etc/php/7.0/fpm/pool.d/www.conf
 
-
-RUN curl -sS https://getcomposer.org/installer | php && \
-    chmod 755 composer.phar && \
-    mv composer.phar /usr/local/bin/composer
+RUN apt update && \
+    apt install -y curl git && \
+    git clone --branch 8.8.x https://github.com/ros-kamach/drupal.git && \
+    cd /drupal/ && \
+    curl -sS https://getcomposer.org/installer -o composer-setup.php && \
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
+    composer install --no-progress --profile --prefer-dist && \
+    chown -R www-data:www-data /drupal && \
+    apt -y clean && \
+    rm -rf /var/lib/apt/lists/*
 
 EXPOSE 9000
 

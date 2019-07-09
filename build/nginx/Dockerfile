@@ -1,10 +1,12 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
-RUN apt-get update \
-    && apt-get install -y nginx \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && echo "daemon off;" >> /etc/nginx/nginx.conf
+RUN apt-get update && \
+    apt-get install -y nginx && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+    echo "daemon off;" >> /etc/nginx/nginx.conf
+
+COPY ./template/default /etc/nginx/sites-available/default
 
 EXPOSE 80
 ENTRYPOINT ["nginx"]
