@@ -9,7 +9,7 @@ nginx_phpfpm:
         - ./nginx_phpfpm/template/default:/etc/nginx/sites-available/default
         - ./nginx_phpfpm/logs/nginx-error.log:/var/log/nginx/error.log
         - ./nginx_phpfpm/logs/nginx-access.log:/var/log/nginx/access.log
-        - ./nginx_phpfpm/logs/drupal_error.log:/var/log/nginx/drupal_error.log
+        - ./nginx_phpfpm/logs/drupal-error.log:/var/log/nginx/drupal_error.log
         - ./nginx_phpfpm/logs/drupal-access.log:/var/log/nginx/drupal_access.log
 
 db_mysql:
