@@ -11,6 +11,8 @@ nginx_phpfpm:
         - ./nginx_phpfpm/logs/nginx-access.log:/var/log/nginx/access.log
         - ./nginx_phpfpm/logs/drupal-error.log:/var/log/nginx/drupal_error.log
         - ./nginx_phpfpm/logs/drupal-access.log:/var/log/nginx/drupal_access.log
+    environment:
+      TZ: "Europe/Kiev"
 
 db_mysql:
     image: mysql
