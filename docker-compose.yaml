@@ -2,5 +2,5 @@ nginx_phpfpm:
     build: ./nginx_phpfpm
     ports:
         - "80:80"
-    environment:
-      TZ: "Europe/Kiev"
+    env_file:
+      - .env
