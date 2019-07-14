@@ -1,26 +1,41 @@
-FROM ubuntu:16.04
+FROM centos:centos7
+
+MAINTAINER Rostylav Kamach <ros.kamach@gmail.com>
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
-    apt-get update -y && \
-    apt-get install -y --no-install-recommends \
-    nginx \
-    php7.0-cli php7.0-common php7.0-mysql php7.0-gd \
-    php7.0-fpm  php7.0-xml php7.0-cgi php7.0-mcrypt \
-    php7.0-curl php7.0-json php7.0-mbstring php7.0-intl && \
+    yum install -y epel-release && yum update -y && \
+    yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
+    yum-config-manager --enable remi-php70 && \
+    yum install nginx yum-utils -y && \
+    yum --enablerepo=remi,remi-php70 install -y \
+    php-cli php-common php-mysql php-gd \
+    php-fpm  php-xml php-cgi php-mcrypt \
+    php-curl php-json php-mbstring php-intl && \
     ###
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+    yum clean all && \
+    rm -rf /var/cache/yum && \
     ###
-    sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php/7.0/fpm/php.ini && \
-    sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php/7.0/fpm/php.ini && \
-    sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/7.0/fpm/php.ini && \
-    sed -i -e "s/;daemonize\s*=\s*yes/daemonize = no/g" /etc/php/7.0/fpm/php-fpm.conf && \
-    sed -i "s/listen = .*/listen = 9000/" /etc/php/7.0/fpm/pool.d/www.conf
+    sed -i -e 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php.ini && \
+    sed -i -e 's/;listen.owner = nobody/listen.owner = nginx/g' /etc/php-fpm.d/www.conf && \
+    sed -i -e 's/;listen.group = nobody/listen.group = nginx/g' /etc/php-fpm.d/www.conf && \
+    sed -i -e 's/user = apache/user = nginx/g' /etc/php-fpm.d/www.conf && \
+    sed -i -e 's/group = apache/group = nginx/g' /etc/php-fpm.d/www.conf && \
+    sed -i -e 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php-fpm.d/www.conf && \
+    sed -i -e 's/;env/env/g' /etc/php-fpm.d/www.conf && \
+    sed -i -e 's/;security.limit_extensions = .php .php3 .php4 .php5 .php7/security.limit_extensions = .php/g' /etc/php-fpm.d/www.conf && \
+    ###
+    rm -rf /usr/share/nginx/html/* /etc/nginx/nginx.conf && \
+    mkdir -p /run/php-fpm && \
+    mkdir -p /var/lib/php/session
 
-COPY ./template/index.php /var/www/html/
-COPY ./template/default /etc/nginx/sites-available/default
+COPY ./template/index.php /usr/share/nginx/html/
+COPY ./template/default /etc/nginx/conf.d/default.conf
+COPY ./template/nginx.conf /etc/nginx/nginx.conf
 
-COPY ./template/script.sh /usr/local/bin/
-RUN chmod u+x /usr/local/bin/script.sh
+COPY ./template/script.sh /usr/local/bin
+RUN chmod u+x /usr/local/bin/script.sh && \
+    chown nginx:nginx /run/php-fpm /usr/share/nginx/html && \
+    chown nginx:nginx /var/lib/php/session
 
 EXPOSE 80
 ENTRYPOINT ["script.sh"]
