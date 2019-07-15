@@ -10,7 +10,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     yum --enablerepo=remi,remi-php70 install -y \
     php-cli php-common php-mysql php-gd \
     php-fpm  php-xml php-cgi php-mcrypt \
-    php-curl php-json php-mbstring php-intl && \
+    php-curl php-json php-mbstring php-intl php-opcache && \
     ###
     yum clean all && \
     rm -rf /var/cache/yum /var/log/yum.log && \
@@ -24,6 +24,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
 
 COPY ./template/index.php /usr/share/nginx/html/
 COPY ./template/default /etc/nginx/conf.d/default.conf
+COPY ./template/10-opcache.ini /etc/php.d/10-opcache.ini
 COPY ./template/nginx.conf /etc/nginx/nginx.conf
 
 COPY ./template/script.sh /usr/local/bin
