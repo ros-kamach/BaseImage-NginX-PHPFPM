@@ -1,0 +1,184 @@
+2019-07-16 15:29:18,360 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-07-16 15:31:22,561 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-07-16 15:31:22,565 INFO supervisord started with pid 6
+2019-07-16 15:31:23,569 INFO spawned: 'nginx' with pid 8
+2019-07-16 15:31:23,571 INFO spawned: 'php-fpm7' with pid 9
+2019-07-16 15:31:23,600 INFO exited: nginx (exit status 0; not expected)
+2019-07-16 15:31:24,644 INFO spawned: 'nginx' with pid 32
+2019-07-16 15:31:24,645 INFO success: php-fpm7 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:31:25,659 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:31:27,162 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:31:28,165 INFO spawned: 'nginx' with pid 33
+2019-07-16 15:31:29,179 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:31:30,683 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:31:31,686 INFO spawned: 'nginx' with pid 34
+2019-07-16 15:31:32,699 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:31:34,203 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:31:35,206 INFO spawned: 'nginx' with pid 35
+2019-07-16 15:31:36,223 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:31:37,727 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:31:38,730 INFO spawned: 'nginx' with pid 36
+2019-07-16 15:31:39,745 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:31:41,248 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:31:42,251 INFO spawned: 'nginx' with pid 37
+2019-07-16 15:31:43,263 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:31:44,767 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:31:45,770 INFO spawned: 'nginx' with pid 38
+2019-07-16 15:31:46,782 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:31:48,287 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:31:49,290 INFO spawned: 'nginx' with pid 39
+2019-07-16 15:31:50,304 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:31:51,808 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:31:52,810 INFO spawned: 'nginx' with pid 40
+2019-07-16 15:31:53,823 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:31:55,326 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:31:56,330 INFO spawned: 'nginx' with pid 41
+2019-07-16 15:31:57,345 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:31:58,849 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:31:59,852 INFO spawned: 'nginx' with pid 42
+2019-07-16 15:32:00,867 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:02,371 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:03,373 INFO spawned: 'nginx' with pid 43
+2019-07-16 15:32:04,386 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:05,889 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:06,892 INFO spawned: 'nginx' with pid 44
+2019-07-16 15:32:07,905 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:09,408 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:10,411 INFO spawned: 'nginx' with pid 45
+2019-07-16 15:32:11,427 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:12,930 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:13,932 INFO spawned: 'nginx' with pid 46
+2019-07-16 15:32:14,950 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:16,453 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:17,456 INFO spawned: 'nginx' with pid 47
+2019-07-16 15:32:18,470 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:19,973 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:20,976 INFO spawned: 'nginx' with pid 48
+2019-07-16 15:32:21,990 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:23,494 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:24,496 INFO spawned: 'nginx' with pid 49
+2019-07-16 15:32:25,509 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:27,013 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:28,016 INFO spawned: 'nginx' with pid 50
+2019-07-16 15:32:29,029 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:30,533 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:31,535 INFO spawned: 'nginx' with pid 51
+2019-07-16 15:32:32,549 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:34,053 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:35,055 INFO spawned: 'nginx' with pid 52
+2019-07-16 15:32:36,068 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:37,573 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:38,575 INFO spawned: 'nginx' with pid 53
+2019-07-16 15:32:39,589 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:41,093 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:42,095 INFO spawned: 'nginx' with pid 54
+2019-07-16 15:32:43,109 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:44,612 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:45,616 INFO spawned: 'nginx' with pid 55
+2019-07-16 15:32:46,629 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:48,131 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:49,135 INFO spawned: 'nginx' with pid 56
+2019-07-16 15:32:50,149 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:51,652 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:52,654 INFO spawned: 'nginx' with pid 57
+2019-07-16 15:32:53,681 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:55,185 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:56,188 INFO spawned: 'nginx' with pid 58
+2019-07-16 15:32:57,201 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:32:58,705 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:32:59,708 INFO spawned: 'nginx' with pid 59
+2019-07-16 15:33:00,720 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:33:02,223 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:33:03,225 INFO spawned: 'nginx' with pid 60
+2019-07-16 15:33:04,238 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:33:05,741 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:33:06,744 INFO spawned: 'nginx' with pid 61
+2019-07-16 15:33:07,759 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:33:09,263 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:33:10,266 INFO spawned: 'nginx' with pid 62
+2019-07-16 15:33:11,279 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:33:12,783 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:33:13,785 INFO spawned: 'nginx' with pid 63
+2019-07-16 15:33:14,799 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:33:16,303 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:33:17,305 INFO spawned: 'nginx' with pid 64
+2019-07-16 15:33:18,318 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:33:19,823 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:33:20,826 INFO spawned: 'nginx' with pid 65
+2019-07-16 15:33:21,853 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:33:23,356 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:33:24,359 INFO spawned: 'nginx' with pid 66
+2019-07-16 15:33:25,372 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:33:26,876 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:33:27,878 INFO spawned: 'nginx' with pid 67
+2019-07-16 15:33:28,891 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:33:30,395 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:33:31,397 INFO spawned: 'nginx' with pid 68
+2019-07-16 15:33:32,411 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:33:33,914 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:33:34,917 INFO spawned: 'nginx' with pid 69
+2019-07-16 15:33:35,930 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:34:40,402 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-07-16 15:34:40,405 INFO supervisord started with pid 6
+2019-07-16 15:34:41,409 INFO spawned: 'nginx' with pid 8
+2019-07-16 15:34:41,410 INFO spawned: 'php-fpm7' with pid 9
+2019-07-16 15:34:41,439 INFO exited: nginx (exit status 0; not expected)
+2019-07-16 15:34:42,487 INFO spawned: 'nginx' with pid 32
+2019-07-16 15:34:42,487 INFO success: php-fpm7 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:34:43,500 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:34:45,004 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:34:46,006 INFO spawned: 'nginx' with pid 33
+2019-07-16 15:34:47,021 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:34:48,523 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:34:49,526 INFO spawned: 'nginx' with pid 34
+2019-07-16 15:34:50,539 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:34:52,043 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:34:53,046 INFO spawned: 'nginx' with pid 35
+2019-07-16 15:34:54,059 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:34:55,563 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:34:56,565 INFO spawned: 'nginx' with pid 36
+2019-07-16 15:34:57,579 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:34:59,082 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:00,085 INFO spawned: 'nginx' with pid 37
+2019-07-16 15:35:01,100 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:02,603 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:03,606 INFO spawned: 'nginx' with pid 38
+2019-07-16 15:35:04,620 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:06,124 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:07,126 INFO spawned: 'nginx' with pid 39
+2019-07-16 15:35:08,141 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:09,644 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:10,647 INFO spawned: 'nginx' with pid 40
+2019-07-16 15:35:11,664 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:13,167 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:13,168 INFO spawned: 'nginx' with pid 41
+2019-07-16 15:35:14,182 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:15,685 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:16,687 INFO spawned: 'nginx' with pid 42
+2019-07-16 15:35:17,700 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:19,203 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:20,205 INFO spawned: 'nginx' with pid 43
+2019-07-16 15:35:21,218 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:22,722 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:23,725 INFO spawned: 'nginx' with pid 44
+2019-07-16 15:35:24,739 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:26,242 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:27,246 INFO spawned: 'nginx' with pid 45
+2019-07-16 15:35:28,259 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:29,763 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:30,766 INFO spawned: 'nginx' with pid 46
+2019-07-16 15:35:31,781 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:33,285 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:34,288 INFO spawned: 'nginx' with pid 47
+2019-07-16 15:35:35,304 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:36,808 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:37,810 INFO spawned: 'nginx' with pid 48
+2019-07-16 15:35:38,830 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:40,336 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 15:35:40,337 INFO spawned: 'nginx' with pid 49
+2019-07-16 15:35:41,351 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-07-16 15:35:42,855 INFO exited: nginx (exit status 1; not expected)
+2019-07-16 16:12:04,251 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-07-16 16:16:05,493 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-07-16 16:17:55,731 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-07-16 16:20:03,162 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
