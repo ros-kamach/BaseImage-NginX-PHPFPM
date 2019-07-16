@@ -1,6 +1,4 @@
 nginx_phpfpm:
     build: ./nginx_phpfpm
-    volumes:
-      - ./nginx_phpfpm/supervisor/s.log:/var/log/supervisord.log
     ports:
         - "80:80"
