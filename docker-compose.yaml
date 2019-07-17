@@ -2,5 +2,3 @@ nginx_phpfpm:
     build: ./nginx_phpfpm
     ports:
         - "80:80"
-    env_file:
-      - .env
