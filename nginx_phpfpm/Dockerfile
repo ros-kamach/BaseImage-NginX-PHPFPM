@@ -1,16 +1,24 @@
 FROM centos:centos7
 
-MAINTAINER Rostylav Kamach <ros.kamach@gmail.com>
+MAINTAINER Rostyslav Kamach "ros.kamach@gmail.com"
 
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
-    yum install -y epel-release && yum update -y && \
-    yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
-    yum-config-manager --enable remi-php70 && \
-    yum install nginx yum-utils -y && \
-    yum --enablerepo=remi,remi-php70 install -y \
-    php-cli php-common php-mysql php-gd \
-    php-fpm  php-xml php-cgi php-mcrypt \
-    php-curl php-json php-mbstring php-intl php-opcache && \
+COPY ./env.sh /
+COPY ./template/nginx.repo /
+
+RUN \
+    ### Enviroment
+    . /env.sh && \
+    ### Nginx prerequisites and repo
+    yum install yum-utils && \
+    cat ./nginx.repo >> /etc/yum.repos.d/nginx.repo && rm ./nginx.repo && \
+    ### EPEL & remi repo
+    yum install -y epel-release && \
+    yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
+    yum-config-manager --enable remi-php72 && \
+    ### Update pachages list
+    yum update && \
+    ## Install Nginx And PHP-FPM
+    yum install nginx php72-php-fpm -y && \
     ###
     yum clean all && \
     rm -rf /var/cache/yum /var/log/yum.log && \
@@ -20,11 +28,13 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     sed -i -e 's/group = apache/group = nginx/g' /etc/php-fpm.d/www.conf && \
     ###
     rm -rf /usr/share/nginx/html/* /etc/nginx/nginx.conf && \
-    mkdir -p /run/php-fpm /etc/nginx/snippets /var/lib/php/session
+    # mkdir -p /run/php-fpm /etc/nginx/snippets /var/lib/php/session
+    ### TimeZone
+    ln -snf  /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime && \
+	echo "${TIME_ZONE}" > /etc/timezone
 
 COPY ./template/index.php /usr/share/nginx/html/
 COPY ./template/default /etc/nginx/conf.d/default.conf
-COPY ./template/10-opcache.ini /etc/php.d/10-opcache.ini
 COPY ./template/nginx.conf /etc/nginx/nginx.conf
 
 COPY ./template/script.sh /usr/local/bin
