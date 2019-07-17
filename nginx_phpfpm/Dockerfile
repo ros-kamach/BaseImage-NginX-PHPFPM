@@ -4,8 +4,9 @@ MAINTAINER Rostyslav Kamach "ros.kamach@gmail.com"
 
 COPY ./env.sh /
 
+RUN \
     ### Enviroment
-RUN . /env.sh && \
+    . /env.sh && \
     ### Update pachages list
     apt-get update -y && \
     ### Nginx prerequisites
@@ -28,7 +29,8 @@ RUN . /env.sh && \
     sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=${PHP_CGI_PATHINFO}/" /etc/php/7.2/fpm/php.ini && \
     sed -i "s/listen = .*/${PHP_LISTEN}/" /etc/php/7.2/fpm/pool.d/www.conf && \
     ### TimeZone
-    ln -snf /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime && echo ${TIME_ZONE} > /etc/timezone
+    ln -snf  /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime && \
+	echo "${TIME_ZONE}" > /etc/timezone
 
 COPY ./template/index.php /usr/share/nginx/html/
 COPY ./template/default /etc/nginx/conf.d/default.conf
