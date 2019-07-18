@@ -17,13 +17,13 @@ RUN \
 	###
 	echo "Install PHP Repo" && echo "###" && \
 	curl -o /etc/apk/keys/phpearth.rsa.pub https://repos.php.earth/alpine/phpearth.rsa.pub > /dev/null 2>&1 && \
-	echo "https://repos.php.earth/alpine/v3.9" >> /etc/apk/repositories && \
+	printf "https://repos.php.earth/alpine/v3.9\n" | tee -a /etc/apk/repositories > /dev/null 2>&1 && \	
 	###
 	echo "Install Nginx repo" && echo "###" && \
 	printf "%s%s%s\n" \
 	"http://nginx.org/packages/alpine/v" \
 	`egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release` \
-	"/main" | tee -a /etc/apk/repositories && \
+	"/main" | tee -a /etc/apk/repositories > /dev/null 2>&1 && \
 	curl -o /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub > /dev/null 2>&1 && \
 	mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/ && \
 	###
