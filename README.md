@@ -2,6 +2,8 @@
    - Use image "ubuntu:16.04" (Official)
    - Install Nhinx+PHPFPM
    - Install  PHPFPM
+      
+  Image Size=259MB
    
 #**Branch "[centos_baseimage](https://github.com/ros-kamach/baseimage-nginx-phpfpm/tree/centos_baseimage)"**
    - Use image "centos:centos7" (Official)
