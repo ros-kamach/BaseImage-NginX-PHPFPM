@@ -7,6 +7,7 @@
    - Use image "centos:centos7" (Official)
    - Install Nhinx+PHPFPM
    - Install  PHPFPM
+   Image Size=347MB
    
 #**Branch "[alpine_baseimage](https://github.com/ros-kamach/baseimage-nginx-phpfpm/tree/alpine_baseimage)"**
    - Use image "alpine" (Official)
