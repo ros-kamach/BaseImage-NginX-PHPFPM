@@ -16,5 +16,7 @@
    - Use image "alpine" (Official)
    - Install Nhinx+PHPFPM
    - Install  PHPFPM
+ 
+  Image Size=61MB
 
 ![alt text](https://websanova.com/img/posts/setting-up-php-with-nginx.png)
