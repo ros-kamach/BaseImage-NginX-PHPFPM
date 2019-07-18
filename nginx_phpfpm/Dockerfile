@@ -14,7 +14,7 @@ RUN \
 	apk add --no-cache bash curl tzdata supervisor > /dev/null 2>&1 && \
     echo "Install PHP Repo" && echo "###" && \
     curl -o /etc/apk/keys/phpearth.rsa.pub https://repos.php.earth/alpine/phpearth.rsa.pub > /dev/null 2>&1 && \
-    echo "https://repos.php.earth/alpine/v3.7" >> /etc/apk/repositories && \
+    echo "https://repos.php.earth/alpine/v3.9" >> /etc/apk/repositories && \
 	echo "Install Nginx prerequisites and repo" && echo "###" && \
 	printf "%s%s%s\n" \
     "http://nginx.org/packages/alpine/v" \
