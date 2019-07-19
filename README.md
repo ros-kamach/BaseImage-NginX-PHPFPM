@@ -1,4 +1,4 @@
-<img src="https://www.agustinhoulgrave.com/img/docker-php-nginx.png" width="180">
+<img src="https://www.agustinhoulgrave.com/img/docker-php-nginx.png">
 
 # <img src="https://cdn.freebiesupply.com/logos/large/2x/ubuntu-4-logo-png-transparent.png" alt="Thunder" width="4%"/> **"[ubuntu_baseimage](https://github.com/ros-kamach/baseimage_nginx_phpfpm/tree/ubuntu_baseimage)"**
 
