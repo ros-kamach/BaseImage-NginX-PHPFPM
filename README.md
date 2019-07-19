@@ -1,4 +1,4 @@
-<img src="https://cdn.freebiesupply.com/logos/large/2x/ubuntu-4-logo-png-transparent.png" width="48"> <img src="https://websanova.com/img/posts/setting-up-php-with-nginx.png" width="48">
+<img src="https://cdn.freebiesupply.com/logos/large/2x/ubuntu-4-logo-png-transparent.png" width="96"> <img src="https://websanova.com/img/posts/setting-up-php-with-nginx.png" width="48">
 
 #**Branch "[ubuntu_baseimage](https://github.com/ros-kamach/baseimage_nginx_phpfpm/tree/ubuntu_baseimage)"**
    - Use image "ubuntu:16.04" (Official)
