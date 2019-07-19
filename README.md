@@ -9,8 +9,7 @@
       
   Image Size=259MB
 ```
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/CentOS_color_logo.svg/1024px-CentOS_color_logo.svg.png" alt="Thunder" width="4%"/> **"
-[centos_baseimage](https://github.com/ros-kamach/baseimage_nginx_phpfpm/tree/centos_baseimage)"**
+# <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/CentOS_color_logo.svg/1024px-CentOS_color_logo.svg.png" alt="Thunder" width="4%"/> **"[centos_baseimage](https://github.com/ros-kamach/baseimage_nginx_phpfpm/tree/centos_baseimage)"**
 
 ```   
  - Use image "centos:7" (Official)
