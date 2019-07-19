@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.10.1
 
 MAINTAINER Rostyslav Kamach "ros.kamach@gmail.com"
 
