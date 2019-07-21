@@ -55,3 +55,4 @@ COPY ./template/supervisor.conf /etc/supervisor/conf.d/supervisord.conf
 
 #CMD ["supervisord", "--nodaemon", "--configuration", "/etc/supervisor/conf.d/supervisord.conf"]
 ENTRYPOINT ["./script.sh"]
+HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1
