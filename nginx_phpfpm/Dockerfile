@@ -50,3 +50,4 @@ RUN chmod u+x /usr/local/bin/script.sh && \
 
 EXPOSE 80
 ENTRYPOINT ["script.sh"]
+HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1
