@@ -7,7 +7,7 @@
 ```   
    - Use image "ubuntu:16.04" (Official)
    - Install Nhinx
-   - Install  PHPFPM
+   - Install PHPFPM
       
   Image Size=259MB
 ```
@@ -19,7 +19,7 @@
 ```   
  - Use image "centos:7" (Official)
    - Install Nhinx
-   - Install  PHPFPM
+   - Install PHPFPM
    
   Image Size=347MB
 ```   
@@ -31,7 +31,7 @@
 ```   
 - Use image "alpine:3.10" (Official)
    - Install Nhinx
-   - Install  PHPFPM
+   - Install PHPFPM
  
   Image Size=61MB
 ```
