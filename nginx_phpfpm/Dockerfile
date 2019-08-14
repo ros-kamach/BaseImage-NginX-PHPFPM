@@ -44,7 +44,7 @@ RUN \
 	chown -R nginx:nginx /usr/share/nginx/html && chmod u+x /script.sh && \
 	###
 	echo "Clean packages and cache" && echo "###" && \
-	apk del curl tzdata > /dev/null 2>&1 && rm -rf /var/cache/apk/* > /dev/null 2>&1
+	apk del tzdata > /dev/null 2>&1 && rm -rf /var/cache/apk/* > /dev/null 2>&1
 
 COPY ./template/php-fpm.conf /etc/php/7.2/
 COPY ./template/www.conf /etc/php/7.2/php-fpm.d/
