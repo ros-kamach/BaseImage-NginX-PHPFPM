@@ -54,5 +54,8 @@ COPY ./template/index.php /usr/share/nginx/html/
 COPY ./template/supervisor.conf /etc/supervisor/conf.d/supervisord.conf
 
 #CMD ["supervisord", "--nodaemon", "--configuration", "/etc/supervisor/conf.d/supervisord.conf"]
+EXPOSE 80
+HEALTHCHECK --interval=5s \
+            --timeout=5s \
+            CMD curl -f http://127.0.0.1:80 || exit
 ENTRYPOINT ["./script.sh"]
-HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1
