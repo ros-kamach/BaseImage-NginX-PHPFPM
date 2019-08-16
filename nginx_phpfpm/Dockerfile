@@ -57,5 +57,5 @@ COPY ./template/supervisor.conf /etc/supervisor/conf.d/supervisord.conf
 EXPOSE 80
 HEALTHCHECK --interval=5s \
             --timeout=5s \
-            CMD curl -f http://127.0.0.1:80 || exit
+            CMD curl -I http://127.0.0.1:80 || exit
 ENTRYPOINT ["./script.sh"]
