@@ -56,6 +56,7 @@ COPY ./template/supervisor.conf /etc/supervisor/conf.d/supervisord.conf
 #CMD ["supervisord", "--nodaemon", "--configuration", "/etc/supervisor/conf.d/supervisord.conf"]
 EXPOSE 80
 HEALTHCHECK --interval=5s \
-            --timeout=5s \
-            CMD curl -I http://127.0.0.1:80 || exit
+            --timeout=10s \
+ 	    --retries=3 
+	    CMD curl -sS 127.0.0.1:80 || exit 1
 ENTRYPOINT ["./script.sh"]
