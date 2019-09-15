@@ -1,7 +1,7 @@
 #!/bin/bash
 supervisord --nodaemon --configuration /etc/supervisor/conf.d/supervisord.conf
-FILE=/db_connect.sh
+FILE=/drush.sh
 if test -f "$FILE"; then
     echo "$FILE exist"
-    bash /db_connect.sh
+    bash /drush.sh
 fi
