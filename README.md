@@ -1,4 +1,4 @@
-<img src="https://www.agustinhoulgrave.com/img/docker-php-nginx.png">
+<img src="https://raw.githubusercontent.com/ros-kamach/baseimage_nginx_phpfpm/master/nginx_phpfpm.logo.png">
 
 #
 
